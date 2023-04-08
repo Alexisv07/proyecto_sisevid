@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ProyectoEvidencia_15_02
+namespace proyecto_sisevid
 {
 
 

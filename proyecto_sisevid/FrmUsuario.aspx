@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmUsuario.aspx.cs" Inherits="ProyectoEvidencia_15_02.FrmUsuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmUsuario.aspx.cs" Inherits="proyecto_sisevid.FrmUsuario" %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -11,7 +11,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <script src="~/Scripts/EstiloU.js"></script>
+        <script src="~/Scripts/MiEstilo.js"></script>
 		<link rel="stylesheet" href="~/Content/EstiloU.css" />
         
 </head>
@@ -124,8 +124,7 @@
                             <asp:Button ID="Button1" runat="server" Text="Guardar" OnClick="Page_Load" OnCommand="btnGuardar" class="btn btn-outline-success"/>
                             <asp:Button ID="Button2" runat="server" Text="Modificar" OnClick="Page_Load" OnCommand="btnModificar"  class="btn btn-outline-primary"/>
                             <asp:Button ID="Button3" runat="server" Text="Consultar" OnClick="Page_Load" OnCommand="btnConsultar" class="btn btn-outline-warning"/>
-                            <asp:Button ID="Button4" runat="server" Text="Borrar" OnClick="Page_Load" OnCommand="btnBorrar" class="btn btn-outline-danger"/>
-
+                            <asp:Button ID="Button4" runat="server" Text="Borrar" OnClick="Page_Load" OnCommand="btnBorrae" class="btn btn-outline-danger"/>
                         </div>
                     </div>
                </div>
@@ -140,9 +139,9 @@
                                   <asp:ListBox ID="ListBox1" runat="server"  multiple class="form-control"></asp:ListBox>
                               </div>
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <asp:Button ID="Button5" runat="server" Text="AgregarRol" class="btn btn-outline-info" OnClick="Page_Load" OnCommand="BtnAgegarRol"/>
+                                <asp:Button ID="Button5" runat="server" Text="AgregarRol" OnClick="Page_Load" OnCommand="BtnAgegarRol" class="btn btn-outline-info"/>
                                 <span style="margin-left: 10px; margin-right: 10px;"></span>
-                                <asp:Button ID="Button6" runat="server" Text="RemoverRol" class="btn btn-outline-dark" OnClick="Page_Load" OnCommand="BtnRemoverRol"/>
+                                <asp:Button ID="Button6" runat="server" Text="RemoverRol" OnClick="Page_Load" OnCommand="BtnRemoverRol" class="btn btn-outline-dark" />
                                 <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
                             </div>
                         </div>

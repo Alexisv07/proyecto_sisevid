@@ -204,6 +204,13 @@
     <Compile Include="FrmUnidadDeMedicion.aspx.designer.cs">
       <DependentUpon>FrmUnidadDeMedicion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsuario.aspx.cs">
+      <DependentUpon>FrmUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmUsuario.aspx.designer.cs">
+      <DependentUpon>FrmUsuario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -251,6 +258,7 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Estado.css" />
+    <Content Include="Content\EstiloU.css" />
     <Content Include="Content\Frecuencia.css" />
     <Content Include="Content\Fuente.css" />
     <Content Include="Content\Indicador.css" />
@@ -267,6 +275,7 @@
     <Content Include="FrmTipoEvidencia.aspx" />
     <Content Include="FrmTipoIndicador.aspx" />
     <Content Include="FrmUnidadDeMedicion.aspx" />
+    <Content Include="FrmUsuario.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />

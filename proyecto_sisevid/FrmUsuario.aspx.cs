@@ -1,9 +1,13 @@
-﻿using ProyectoEvidencia_15_02.Controllers;
-using ProyectoEvidencia_15_02.Models;
+﻿using proyecto_sisevid.Controllers;
+using proyecto_sisevid.Models;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace ProyectoEvidencia_15_02
+namespace proyecto_sisevid
 {
     public partial class FrmUsuario : System.Web.UI.Page
     {
@@ -32,7 +36,7 @@ namespace ProyectoEvidencia_15_02
             Usuario objUsuario = new Usuario(nomU, cont);
             ControlUsuario objControlUsuario = new ControlUsuario(objUsuario);
             objControlUsuario.guardar();
-            for (int i=0; i<ListBox1.Items.Count; i++) //me recorre los datos de la tabla intermedia para mostrarla en la vista
+            for (int i = 0; i < ListBox1.Items.Count; i++) //me recorre los datos de la tabla intermedia para mostrarla en la vista
             {
                 string[] cadena = ListBox1.Items[i].ToString().Split(';');
                 int idRol = Convert.ToInt32(cadena[0]);
@@ -40,7 +44,7 @@ namespace ProyectoEvidencia_15_02
                 ControlRolUsuario objcontrolRolUsuario = new ControlRolUsuario(objRolusuario);
                 objcontrolRolUsuario.guardar();
             }
-            
+
             Response.Redirect("FrmUsuario.aspx");
         }
 
@@ -65,7 +69,6 @@ namespace ProyectoEvidencia_15_02
                 objControlRolUsuario.guardar();
             }
             Response.Redirect("FrmUsuario.aspx");
-
         }
 
         protected void btnConsultar(object sender, CommandEventArgs e)
@@ -91,7 +94,7 @@ namespace ProyectoEvidencia_15_02
             }
         }
 
-        protected void btnBorrar(object sender, CommandEventArgs e)
+        protected void btnBorrae(object sender, CommandEventArgs e)
         {
             string nomU = txtNomUsuario.Text;
             Usuario objUsuario = new Usuario(nomU, "");
@@ -106,7 +109,6 @@ namespace ProyectoEvidencia_15_02
             DropDownList1.Items.Remove(DropDownList1.SelectedValue);
 
             //Response.Redirect("~/usu.aspx?id=addEmployeeModal"); codigo para llevar a la vista en modal luego de ingresar un dato consultaro agregar
-
 
         }
 
