@@ -138,6 +138,7 @@
     <Compile Include="Controllers\ControlEstado.cs" />
     <Compile Include="Controllers\ControlFrecuencia.cs" />
     <Compile Include="Controllers\ControlFuente.cs" />
+    <Compile Include="Controllers\ControlFuenteIndicador.cs" />
     <Compile Include="Controllers\ControlRepresenVisual.cs" />
     <Compile Include="Controllers\ControlResponsable.cs" />
     <Compile Include="Controllers\ControlRol.cs" />
@@ -218,6 +219,7 @@
     <Compile Include="Models\Frecuencia.cs" />
     <Compile Include="Models\Fuente.cs" />
     <Compile Include="Models\Estado.cs" />
+    <Compile Include="Models\FuenteIndicador.cs" />
     <Compile Include="Models\RepresenVisual.cs" />
     <Compile Include="Models\Responsable.cs" />
     <Compile Include="Models\Rol.cs" />
