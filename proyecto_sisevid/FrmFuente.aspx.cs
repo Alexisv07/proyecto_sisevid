@@ -8,11 +8,11 @@ namespace proyecto_sisevid
     public partial class FrmFuente : System.Web.UI.Page
     {
         protected Fuente[] arregloFuente = null;
+        //protected FuenteIndicador[] arregloFuenteIndicador = null; 
         protected void Page_Load(object sender, EventArgs e)
         {
             ControlFuente objcontrolFuente = new ControlFuente();
             arregloFuente = objcontrolFuente.listar();
-
         }
 
         protected void btnGuardar(object sender, CommandEventArgs e)

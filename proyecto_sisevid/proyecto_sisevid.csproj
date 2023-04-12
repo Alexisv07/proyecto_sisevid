@@ -143,6 +143,7 @@
     <Compile Include="Controllers\ControlResponsable.cs" />
     <Compile Include="Controllers\ControlRol.cs" />
     <Compile Include="Controllers\ControlRolUsuario.cs" />
+    <Compile Include="Controllers\ControlSentido.cs" />
     <Compile Include="Controllers\ControlTipoEvidencia.cs" />
     <Compile Include="Controllers\ControlTipoIndicador.cs" />
     <Compile Include="Controllers\ControlUnidadDeMedicion.cs" />
@@ -184,6 +185,13 @@
     <Compile Include="FrmResponsable.aspx.designer.cs">
       <DependentUpon>FrmResponsable.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FrmSentido.aspx.cs">
+      <DependentUpon>FrmSentido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmSentido.aspx.designer.cs">
+      <DependentUpon>FrmSentido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FrmTipoEvidencia.aspx.cs">
       <DependentUpon>FrmTipoEvidencia.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,6 +232,7 @@
     <Compile Include="Models\Responsable.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\RolUsuario.cs" />
+    <Compile Include="Models\Sentido.cs" />
     <Compile Include="Models\TipoEvidencia.cs" />
     <Compile Include="Models\TipoIndicador.cs" />
     <Compile Include="Models\UnidadDeMedicion.cs" />
@@ -266,6 +275,7 @@
     <Content Include="Content\Indicador.css" />
     <Content Include="Content\RepresenVisual.css" />
     <Content Include="Content\Responsable.css" />
+    <Content Include="Content\Sentido.css" />
     <Content Include="Content\TipoEvidencia.css" />
     <Content Include="Content\UnidadDeMedicion.css" />
     <Content Include="favicon.ico" />
@@ -274,6 +284,7 @@
     <Content Include="FrmFuente.aspx" />
     <Content Include="FrmRepresenVisual.aspx" />
     <Content Include="FrmResponsable.aspx" />
+    <Content Include="FrmSentido.aspx" />
     <Content Include="FrmTipoEvidencia.aspx" />
     <Content Include="FrmTipoIndicador.aspx" />
     <Content Include="FrmUnidadDeMedicion.aspx" />
