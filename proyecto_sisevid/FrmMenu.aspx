@@ -1,0 +1,98 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="FrmMenu.aspx.cs" Inherits="proyecto_sisevid.FrmMenu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Home</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"/>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        footer{
+        position:absolute;
+        bottom:0;
+        width:100%;
+         }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="FrmCerrarSesion.aspx">Cerrar Sesión</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="FrmMenu.aspx">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Usuarios
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="FrmUsuarios.aspx">Gestión Usuarios</a>
+                  <a class="dropdown-item" href="#">Gestión Roles</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Evidencias
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Gestión Evidencias</a>
+                  <a class="dropdown-item" href="#">Tipos de Evidencia</a>
+                  <a class="dropdown-item" href="#">Gestión Autores</a>
+                   <a class="dropdown-item" href="#">Gestión Estados</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Indicadores
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Gestión Indicadores</a>
+                   <a class="dropdown-item" href="#">Gestión de tipos de Indicador</a>
+                  <a class="dropdown-item" href="#">Gestión de Responsables</a>
+                  <a class="dropdown-item" href="#">Gestión de Unidades de Medición</a>
+                  <a class="dropdown-item" href="#">Gestión de Sentido</a>
+                  <a class="dropdown-item" href="#">Gestión de Frecuencias</a>
+                  <a class="dropdown-item" href="#">Gestión de Fuentes</a>
+                <a class="dropdown-item" href="#">Gestión de Representación visual</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </div>
+        </nav>
+        </div>
+            <footer class="bg-light text-center text-lg-start">
+                  <!-- Copyright -->
+                  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                    © 2020 Copyright:
+                    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                  </div>
+                  <!-- Copyright -->
+            </footer>
+    </form>
+
+</body>
+</html>

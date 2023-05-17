@@ -133,14 +133,27 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="base.Master.cs">
+      <DependentUpon>base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base.Master.designer.cs">
+      <DependentUpon>base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ControlArticulo.cs" />
     <Compile Include="Controllers\ControlAutor.cs" />
     <Compile Include="Controllers\ControlConexion.cs" />
     <Compile Include="Controllers\ControlEstado.cs" />
+    <Compile Include="Controllers\ControlEvidencia.cs" />
+    <Compile Include="Controllers\ControlEvidenciaAutor.cs" />
+    <Compile Include="Controllers\ControlEvidenciaEstado.cs" />
     <Compile Include="Controllers\ControlFrecuencia.cs" />
     <Compile Include="Controllers\ControlFuente.cs" />
     <Compile Include="Controllers\ControlFuenteIndicador.cs" />
+    <Compile Include="Controllers\ControlIndicador.cs" />
     <Compile Include="Controllers\ControlRepresenVisual.cs" />
     <Compile Include="Controllers\ControlResponsable.cs" />
+    <Compile Include="Controllers\ControlResultadoIndicador.cs" />
     <Compile Include="Controllers\ControlRol.cs" />
     <Compile Include="Controllers\ControlRolUsuario.cs" />
     <Compile Include="Controllers\ControlSentido.cs" />
@@ -148,6 +161,9 @@
     <Compile Include="Controllers\ControlTipoIndicador.cs" />
     <Compile Include="Controllers\ControlUnidadDeMedicion.cs" />
     <Compile Include="Controllers\ControlUsuario.cs" />
+    <Compile Include="Controllers\ControlVariable.cs" />
+    <Compile Include="Controllers\ControlVariableIndicador.cs" />
+    <Compile Include="Controllers\ControRepresentacionVisualIndicador.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="FrmEstado.aspx.cs">
@@ -156,6 +172,13 @@
     </Compile>
     <Compile Include="FrmEstado.aspx.designer.cs">
       <DependentUpon>FrmEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEvidencia.aspx.cs">
+      <DependentUpon>FrmEvidencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmEvidencia.aspx.designer.cs">
+      <DependentUpon>FrmEvidencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmFrecuencia.aspx.cs">
       <DependentUpon>FrmFrecuencia.aspx</DependentUpon>
@@ -170,6 +193,20 @@
     </Compile>
     <Compile Include="FrmFuente.aspx.designer.cs">
       <DependentUpon>FrmFuente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIndicador.aspx.cs">
+      <DependentUpon>FrmIndicador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmIndicador.aspx.designer.cs">
+      <DependentUpon>FrmIndicador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.aspx.cs">
+      <DependentUpon>FrmMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.aspx.designer.cs">
+      <DependentUpon>FrmMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="FrmRepresenVisual.aspx.cs">
       <DependentUpon>FrmRepresenVisual.aspx</DependentUpon>
@@ -223,13 +260,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Articulo.cs" />
     <Compile Include="Models\Autor.cs" />
+    <Compile Include="Models\Evidencia.cs" />
+    <Compile Include="Models\EvidenciaAutor.cs" />
+    <Compile Include="Models\EvidenciaEstado.cs" />
     <Compile Include="Models\Frecuencia.cs" />
     <Compile Include="Models\Fuente.cs" />
     <Compile Include="Models\Estado.cs" />
     <Compile Include="Models\FuenteIndicador.cs" />
+    <Compile Include="Models\Indicador.cs" />
     <Compile Include="Models\RepresenVisual.cs" />
+    <Compile Include="Models\RepresenVisualIndicador.cs" />
     <Compile Include="Models\Responsable.cs" />
+    <Compile Include="Models\ResponsableIndicador.cs" />
+    <Compile Include="Models\ResultadoIndicador.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\RolUsuario.cs" />
     <Compile Include="Models\Sentido.cs" />
@@ -237,6 +282,8 @@
     <Compile Include="Models\TipoIndicador.cs" />
     <Compile Include="Models\UnidadDeMedicion.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Variable.cs" />
+    <Compile Include="Models\VariableIndicador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FrmAutor.aspx.cs">
       <DependentUpon>FrmAutor.aspx</DependentUpon>
@@ -270,6 +317,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Estado.css" />
     <Content Include="Content\EstiloU.css" />
+    <Content Include="Content\Evidencia.css" />
     <Content Include="Content\Frecuencia.css" />
     <Content Include="Content\Fuente.css" />
     <Content Include="Content\Indicador.css" />
@@ -280,8 +328,11 @@
     <Content Include="Content\UnidadDeMedicion.css" />
     <Content Include="favicon.ico" />
     <Content Include="FrmEstado.aspx" />
+    <Content Include="FrmEvidencia.aspx" />
     <Content Include="FrmFrecuencia.aspx" />
     <Content Include="FrmFuente.aspx" />
+    <Content Include="FrmIndicador.aspx" />
+    <Content Include="FrmMenu.aspx" />
     <Content Include="FrmRepresenVisual.aspx" />
     <Content Include="FrmResponsable.aspx" />
     <Content Include="FrmSentido.aspx" />
@@ -298,6 +349,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="FrmAutor.aspx" />
+    <Content Include="base.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
