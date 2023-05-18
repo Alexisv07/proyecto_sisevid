@@ -317,7 +317,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Estado.css" />
     <Content Include="Content\EstiloU.css" />
-    <Content Include="Content\Evidencia.css" />
+    <Content Include="Content\Eviden.css" />
     <Content Include="Content\Frecuencia.css" />
     <Content Include="Content\Fuente.css" />
     <Content Include="Content\Indicador.css" />

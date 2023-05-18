@@ -33,6 +33,15 @@ namespace proyecto_sisevid
         protected global::System.Web.UI.WebControls.TextBox txtId;
 
         /// <summary>
+        /// Control TextCod.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextCod;
+
+        /// <summary>
         /// Control txtFechaR.
         /// </summary>
         /// <remarks>
@@ -42,121 +51,67 @@ namespace proyecto_sisevid
         protected global::System.Web.UI.WebControls.TextBox txtFechaR;
 
         /// <summary>
-        /// Control txtFechaC.
+        /// Control txtObje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaC;
+        protected global::System.Web.UI.WebControls.TextBox txtObje;
 
         /// <summary>
-        /// Control txtDescripcion.
+        /// Control TextAlc.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
+        protected global::System.Web.UI.WebControls.TextBox TextAlc;
 
         /// <summary>
-        /// Control txtArchi.
+        /// Control TextFormu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArchi;
+        protected global::System.Web.UI.WebControls.TextBox TextFormu;
 
         /// <summary>
-        /// Control FileUpload1.
+        /// Control txtTipoIndi.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.TextBox txtTipoIndi;
 
         /// <summary>
-        /// Control Button1.
+        /// Control txtUndMedi.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.TextBox txtUndMedi;
 
         /// <summary>
-        /// Control txtlinkA.
+        /// Control TextIdSneti.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtlinkA;
+        protected global::System.Web.UI.WebControls.TextBox TextIdSneti;
 
         /// <summary>
-        /// Control txtObservacion.
+        /// Control TextIdFrecu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtObservacion;
-
-        /// <summary>
-        /// Control txtTipoE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTipoE;
-
-        /// <summary>
-        /// Control txtArticulo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtArticulo;
-
-        /// <summary>
-        /// Control txtliteral.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtliteral;
-
-        /// <summary>
-        /// Control txtNumeral.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNumeral;
-
-        /// <summary>
-        /// Control txtSubnumeral.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSubnumeral;
-
-        /// <summary>
-        /// Control txtsub_subn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsub_subn;
+        protected global::System.Web.UI.WebControls.TextBox TextIdFrecu;
 
         /// <summary>
         /// Control DropDownList1.

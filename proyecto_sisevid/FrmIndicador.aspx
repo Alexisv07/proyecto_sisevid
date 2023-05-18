@@ -13,7 +13,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="~/Content/Evidencia.css" />
+        <link rel="stylesheet" href="~/Content/Indicador.css" />
         <script src="~/Scripts/MiEstilo.js"></script>
 </head>
 <body>
@@ -24,10 +24,10 @@
                         <div class="table-title">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h2><b>Evidencias</b></h2>
+                                    <h2><b>Indicadores</b></h2>
                                 </div>
                                 <div class="col-sm-6">
-                                    <a href="#Evidencia" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar Evidencia</span></a>
+                                    <a href="#Indi" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Agregar Evidencia</span></a>
                                     <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>
                                 </div>
                             </div>
@@ -42,24 +42,22 @@
                                         </span>
                                     </th>
                                     <th>Id</th>
-						            <th>FechaRegristro</th>
-						            <th>FechaCreacion</th>
-						            <th>descripcion</th>
-						            <th>NombreArchivo</th>
-					                <th>LinkArchivo</th>
-						            <th>Observacion</th>
-						            <th>tipoEidencia</th>
-						            <th>Articulo</th>
-						            <th>literal</th>
-						            <th>numeral</th>
-						            <th>Subnumeral</th>
-						            <th>Sub_Subnumeral</th>
+						            <th>Código</th>
+						            <th>Nombre</th>
+						            <th>Objetivo</th>
+						            <th>Alcance</th>
+					                <th>Formula</th>
+						            <th>Tipo Indi</th>
+						            <th>Uni de Medición</th>
+						            <th>Meta</th>
+						            <th>Id Sentido</th>
+						            <th>Id Frecuencia</th>
                                     </tr>
                             </thead>
                             <tbody>
                                 <%try
                                         {  %>
-                                <% for (int i = 0; i < arregloEvidencia.Length; i++)
+                                <% for (int i = 0; i < arregloIndicador.Length; i++)
                                     {%>
                                 <tr>
                                     <td style="white-space: nowrap;>
@@ -68,19 +66,17 @@
                                             <label for="checkbox1"></label>
                                         </span>
                                     </td>
-                                    <td><% Response.Write(arregloEvidencia [i].id);  %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fecharegistro);  %></td>
-						            <td><% Response.Write(arregloEvidencia [i].FechaCreacion); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].descripcion); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].NomArchivo); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].LinkArchivo); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Observacion); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fkidtipoevidencia); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fkidarticulo); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fkidliteral); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fkidnumeral); %></td>
-						            <td><% Response.Write(arregloEvidencia [i].Fkidsubnumeral); %></td>
-						            <td style="white-space: nowrap;><% Response.Write(arregloEvidencia [i].Fkidsub_subnumeral); %></td>
+                                    <td><% Response.Write(arregloIndicador [i].Id);  %></td>
+						            <td><% Response.Write(arregloIndicador [i].Codigo);  %></td>
+						            <td><% Response.Write(arregloIndicador [i].Nombre); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Objetivo); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Alcance); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Formula); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Fkidtipoindicador); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Fkidunidadmedicion); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Meta); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Fkidsentido); %></td>
+						            <td><% Response.Write(arregloIndicador [i].Fkidfrecuencia); %></td>
                                     <td>
                                         <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                                         <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
@@ -110,11 +106,11 @@
                 </div>
             </div>
 <!-- Crud Modal HTML -->
-<div id="Evidencia" class="modal fade">
+<div id="Indi" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 				<div class="modal-header">						
-					<h4 class="modal-title">Usuarios</h4>
+					<h4 class="modal-title">Indicadores</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">
@@ -123,7 +119,7 @@
                           <!-- Nav tabs -->
                           <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item">
-                              <a class="nav-link active" data-toggle="tab" href="#home">Datos Usuario</a>
+                              <a class="nav-link active" data-toggle="tab" href="#home">Dato Indicador</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" data-toggle="tab" href="#menu1">Roles Por Usuario</a>
@@ -135,68 +131,65 @@
                           <div class="tab-content">
                             <div id="home" class="container tab-pane active"><br>
 					            <div class="form-group">
-						            <label>Id</label>
-                                    <asp:TextBox ID="txtId" placeholder="Este Campo solo es para consulta" runat="server" class="form-control"></asp:TextBox>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+						                    <label>Id</label>
+                                            <asp:TextBox ID="txtId" placeholder="Este Campo solo es para consulta" runat="server" class="form-control"></asp:TextBox>
+					                     </div>
+                                        <div class="col-sm-6">
+						                    <label>Código</label>
+                                            <asp:TextBox ID="TextCod" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+                                    </div>
 					            </div>
                                 <div class="form-group">
-					            <div class="row">
-                                    <div class="col-sm-6">
-						            <label>FechaRegristro</label>
-                                    <asp:TextBox  ID="txtFechaR" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="col-sm-6">
-						            <label>FechaCreacion</label>
-                                    <asp:TextBox  ID="txtFechaC" runat="server" class="form-control"></asp:TextBox>
-					            </div>
+					                <div class="row">
+                                        <div class="col-sm-6">
+						                    <label>Nombre</label>
+                                            <asp:TextBox  ID="txtFechaR" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+								        <div class="col-sm-6">
+						                    <label>Objetivo</label>
+                                            <asp:TextBox  ID="txtObje" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+                                    </div>
                                 </div>
+								<div class="form-group">
+					                <div class="row">
+                                        <div class="col-sm-6">
+						                    <label>Alcance</label>
+                                            <asp:TextBox  ID="TextAlc" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+								        <div class="col-sm-6">
+						                    <label>Formula</label>
+                                            <asp:TextBox  ID="TextFormu" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+                                     </div>
                                 </div>
 								<div class="form-group">
-						            <label>Descripcion</label>
-                                    <asp:TextBox  ID="txtDescripcion" runat="server" class="form-control"></asp:TextBox>
-					            </div><br />
+                                    <div class="row">
+                                        <div class="col-sm-6">
+						                    <label>Tipo Indicador</label>
+                                            <asp:TextBox  ID="txtTipoIndi" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+								        <div class="col-sm-6">
+						                    <label>Uni de Medición</label>
+                                            <asp:TextBox  ID="txtUndMedi" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+                                    </div>
+								</div>
 								<div class="form-group">
-						            
-                                    <asp:TextBox  ID="txtArchi" runat="server" class="form-control" placeholder="Cargar Archivo"></asp:TextBox>
-                                    <asp:FileUpload ID="FileUpload1" runat="server" class="btn btn-outline-secondary; form-control" type="button" />
-                                    <br /> <br />
-                                    <asp:Button ID="Button1" runat="server" Text="Button" OnClick="btnSubir_Click" />
-					            </div>
-								<div class="form-group">
-						            <label>LinkArchivo</label>
-                                    <asp:TextBox  ID="txtlinkA" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>Observacion</label>
-                                    <asp:TextBox  ID="txtObservacion" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>TipoEvidencia</label>
-                                    <asp:TextBox  ID="txtTipoE" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>Articulo</label>
-                                    <asp:TextBox  ID="txtArticulo" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>Literal</label>
-                                    <asp:TextBox  ID="txtliteral" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>Numeral</label>
-                                    <asp:TextBox  ID="txtNumeral" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>Subnumeral</label>
-                                    <asp:TextBox  ID="txtSubnumeral" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-								<div class="form-group">
-						            <label>sub_subnumeral</label>
-                                    <asp:TextBox  ID="txtsub_subn" runat="server" class="form-control"></asp:TextBox>
-					            </div>
-                                <div class="form-group">
-
-                                </div>
-
+                                    <div class="row">
+                                        <div class="col-sm-6">
+						                    <label>Id Sentido</label>
+                                            <asp:TextBox  ID="TextIdSneti" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+								        <div class="col-sm-6">
+						                    <label>Id Frecuencia</label>
+                                            <asp:TextBox  ID="TextIdFrecu" runat="server" class="form-control"></asp:TextBox>
+					                    </div>
+                                    </div>
+								</div>
                             </div>
                             <div id="menu1" class="container tab-pane fade"><br>
 

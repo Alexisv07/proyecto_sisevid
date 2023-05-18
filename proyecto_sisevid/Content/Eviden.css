@@ -2,14 +2,12 @@
     color: #566787;
     background: #f5f5f5;
     font-family: 'Varela Round', sans-serif;
-    font-size: 100px;
-    height: 800px;
-
+    font-size: 13px;
+    height: 369px;
 }
 
 .table-responsive {
     margin: 30px 0;
-    overflow-x: auto;
 }
 
 .table-wrapper {
@@ -18,15 +16,14 @@
     border-radius: 3px;
     min-width: 1400px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    
 }
 
 .table-title {
     padding-bottom: 15px;
-    background: #FFC107;
+    background: #b200ff;
     color: #000000;
     padding: 16px 30px;
-    min-width: 180%;
+    min-width: 100%;
     margin: -20px -25px 10px;
     border-radius: 3px 3px 0 0;
 }
@@ -45,11 +42,11 @@
         float: right;
         font-size: 13px;
         border: none;
-        min-width: 60px;
-        border-radius: 6px;
+        min-width: 50px;
+        border-radius: 2px;
         border: none;
         outline: none !important;
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
         .table-title .btn i {
@@ -68,11 +65,10 @@ table.table tr th, table.table tr td {
     border-color: rgba(0,0,0,.05);
     padding: 12px 15px;
     vertical-align: middle;
-    
 }
 
     table.table tr th:first-child {
-        width: 60px;
+        width: 1400px;
     }
 
     table.table tr th:last-child {
@@ -84,7 +80,7 @@ table.table-striped tbody tr:nth-of-type(odd) {
 }
 
 table.table-striped.table-hover tbody tr:hover {
-    background: #FFC107;
+    background: #b200ff;
 }
 
 table.table th i {
