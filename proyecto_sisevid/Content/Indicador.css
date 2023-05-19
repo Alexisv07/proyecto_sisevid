@@ -229,7 +229,7 @@ table.table .avatar {
     }
 /* Modal styles */
 .modal .modal-dialog {
-    max-width: 700px;
+    max-width: 850px;
 }
 
 .modal .modal-header, .modal .modal-body, .modal .modal-footer {
@@ -263,6 +263,7 @@ table.table .avatar {
 .modal .btn {
     border-radius: 2px;
     min-width: 80px;
+    float: left;
 }
 
 .modal form label {
@@ -271,4 +272,8 @@ table.table .avatar {
 
 button {
     margin: 10px;
+}
+.left-button {
+    float: left;
+    /* Agrega aquí cualquier otro estilo que desees aplicar al botón */
 }

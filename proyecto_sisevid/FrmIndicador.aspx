@@ -122,7 +122,16 @@
                               <a class="nav-link active" data-toggle="tab" href="#home">Dato Indicador</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" data-toggle="tab" href="#menu1">Roles Por Usuario</a>
+                              <a class="nav-link" data-toggle="tab" href="#Fuente">Fuente</a>
+                            </li>
+                             <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#ReVusa">Repre. Visual</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#Vari_Indi">Vari. Indicador</a>
+                            </li>
+                             <li class="nav-item">
+                              <a class="nav-link" data-toggle="tab" href="#Respo_Vi">Respon. Visual</a>
                             </li>
 
                           </ul>
@@ -130,11 +139,12 @@
                           <!-- Tab panes -->
                           <div class="tab-content">
                             <div id="home" class="container tab-pane active"><br>
+                                <!-- Inicio Indicador -->
 					            <div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6">
 						                    <label>Id</label>
-                                            <asp:TextBox ID="txtId" placeholder="Este Campo solo es para consulta" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:TextBox ID="TextId" placeholder="Este Campo solo es para consulta" runat="server" class="form-control"></asp:TextBox>
 					                     </div>
                                         <div class="col-sm-6">
 						                    <label>Código</label>
@@ -146,11 +156,11 @@
 					                <div class="row">
                                         <div class="col-sm-6">
 						                    <label>Nombre</label>
-                                            <asp:TextBox  ID="txtFechaR" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:TextBox  ID="textNom" runat="server" class="form-control"></asp:TextBox>
 					                    </div>
 								        <div class="col-sm-6">
 						                    <label>Objetivo</label>
-                                            <asp:TextBox  ID="txtObje" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:TextBox  ID="TextObje" runat="server" class="form-control"></asp:TextBox>
 					                    </div>
                                     </div>
                                 </div>
@@ -170,14 +180,18 @@
                                     <div class="row">
                                         <div class="col-sm-6">
 						                    <label>Tipo Indicador</label>
-                                            <asp:TextBox  ID="txtTipoIndi" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:TextBox  ID="TextTipoIndi" runat="server" class="form-control"></asp:TextBox>
 					                    </div>
 								        <div class="col-sm-6">
 						                    <label>Uni de Medición</label>
-                                            <asp:TextBox  ID="txtUndMedi" runat="server" class="form-control"></asp:TextBox>
+                                            <asp:TextBox  ID="TextUndMedi" runat="server" class="form-control"></asp:TextBox>
 					                    </div>
                                     </div>
 								</div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Meta</label>
+                                    <asp:TextBox  ID="TextMet" runat="server" class="form-control"></asp:TextBox>
+                                </div>
 								<div class="form-group">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -190,31 +204,88 @@
 					                    </div>
                                     </div>
 								</div>
+                                <div class="form-group">
+<!-- botones -->
+                                   <asp:Button ID="Button1" runat="server" Text="Guardar" OnClick="Page_Load" OnCommand="btnGuardar" class="btn btn-outline-success"/>
+                                </div>
+                                <!-- Fin Indicador -->
                             </div>
-                            <div id="menu1" class="container tab-pane fade"><br>
+                              <!-- Inicio Fuente -->
+                            <div id="Fuente" class="container tab-pane fade"><br>
 
                                   <div class="form-group">
-                                    <label for="exampleFormControlSelect1">Roles</label>
+                                    <label for="exampleFormControlSelect1">Fuente Indicador</label>
                                       <asp:DropDownList ID="DropDownList1" runat="server" class="form-control"></asp:DropDownList>
                                   </div>
                                   <div class="form-group">
-                                    <label for="exampleFormControlSelect2">Roles del Usuario</label>
+                                    <label for="exampleFormControlSelect2">Indicador</label>
                                       <asp:ListBox ID="ListBox1" runat="server" multiple class="form-control"></asp:ListBox>
                                   </div>
                                 <div class="form-group">
 
                                 </div>
                             </div>
+                              <!-- Fin Fuente -->
+
+                              <!-- Inicio Responsable Visual -->
+                            <div id="ReVusa" class="container tab-pane fade"><br>
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Fuente </label>
+                                      <asp:DropDownList ID="DropDownList2" runat="server" class="form-control"></asp:DropDownList>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Roles del Usuario</label>
+                                      <asp:ListBox ID="ListBox2" runat="server" multiple class="form-control"></asp:ListBox>
+                                  </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                              <!-- Fin Responsable Visual -->
+
+                              <!-- Inicio Variable Inidicador -->
+                             <div id="Vari_Indi" class="container tab-pane fade"><br>
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Roles</label>
+                                      <asp:DropDownList ID="DropDownList3" runat="server" class="form-control"></asp:DropDownList>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Roles del Usuario</label>
+                                      <asp:ListBox ID="ListBox3" runat="server" multiple class="form-control"></asp:ListBox>
+                                  </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                              <!-- Fin Variable Inidicador -->
+
+                              <!-- Inicio Responsable Visual -->
+                             <div id="Respo_Vi" class="container tab-pane fade"><br>
+
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect1">Roles</label>
+                                      <asp:DropDownList ID="DropDownList4" runat="server" class="form-control"></asp:DropDownList>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleFormControlSelect2">Roles del Usuario</label>
+                                      <asp:ListBox ID="ListBox4" runat="server" multiple class="form-control"></asp:ListBox>
+                                  </div>
+                                <div class="form-group">
+
+                                </div>
+                            </div>
+                           <!-- Fin Responsable Visual -->
                           </div>
                         </div>
                     </div>
-			
+			         <div class="form-group">
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
+                        </div>
+                    </div>
 				</div>
-				<div class="modal-footer">
-					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
-
-				</div>
-
 		</div>
 	</div>
 </div>
